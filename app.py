@@ -10,11 +10,6 @@ from pywebio.platform.flask import webio_view
 
 myapp = Flask(__name__)
 
-# @app.route("/")
-# def hello_world():
-#     return "<p>Hello, World!</p>"
-
-
 def datetime2UTC_Z(dt_dt, tz_info):
     return str(dt_dt.replace(microsecond=0).replace(tzinfo=tz_info).astimezone(tz=datetime.timezone.utc).isoformat()).replace('+00:00', 'Z')
 
